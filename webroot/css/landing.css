@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+body, p, a, span, div, .navbar, .nav-link, .navbar-brand {
+    font-family: 'Comfortaa', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* ==========================================================================
+   Header Section
+   ========================================================================== */
+header {
+    background: url('../img/sample.png') no-repeat center center;
+    background-size: cover;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header h1, header h2, header h3, header h4, header h5, header h6 {
+    font-family: 'Lora', serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 3px;
+}
+
+header h1, header p {
+    z-index: 2;
+    color: white;
+}
+
+/* ==========================================================================
+   Product Gallery Section
+   ========================================================================== */
+.product-gallery {
+    padding: 30px 0;
+    width: 100%;
+}
+
+.gallery-title {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.view-all {
+    margin-bottom: 15px;
+}
+
+.view-all .btn {
+    color: black;
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.view-all .btn:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Gallery Wrapper and Container
+   ========================================================================== */
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure wrapper contains the scrollable content */
+}
+
+.gallery-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap; /* Keep items in a single row */
+    max-width: 100%; /* Prevent overflow beyond container */
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    width: max-content; /* Allow gallery to expand based on content */
+    padding: 0 10px; /* Optional: padding for edge cases */
+}
+
+/* ==========================================================================
+   Product Card
+   ========================================================================== */
+.product-card {
+    flex: 0 0 250px; /* Fixed width */
+    width: 250px; /* Explicit width */
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    overflow: visible;
+}
+
+.product-card .image-container {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card:hover {
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-info {
+    padding: 10px;
+    background: white;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Quick View Link
+   ========================================================================== */
+.quick-view {
+    display: none;
+    position: absolute;
+    top: 70% !important;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: lighter;
+    transition: all 0.1s ease;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    width: 90%;
+}
+
+.product-card:hover .quick-view {
+    display: block;
+    background: white;
+    color: black;
+    border: 1px solid grey;
+}
+
+/* ==========================================================================
+   Arrow Navigation
+   ========================================================================== */
+.arrow-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 22px;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.arrow-nav:hover {
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 1 !important;
+}
+
+.arrow-nav.left {
+    left: 10px;
+}
+
+.arrow-nav.right {
+    right: 10px;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.d-sm-flex .btn {
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.d-sm-flex .btn:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.btn-lg {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+}

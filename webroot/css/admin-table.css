@@ -1,0 +1,391 @@
+:root {
+    --primary-products-color: #b12704;
+    --primary-products-light: #D56F6;
+    --secondary-products-color: #6f8759;
+    --red-warning-color: #a33939;
+    --product-text-color: #111111;
+    --text-label-color: #e3e3e3;
+}
+
+.admin-headings{
+    font-family: Lora, serif;
+    font-weight: 300;
+
+}
+.top-products-divider{
+
+}
+
+.top-product-row {
+    display: flex;
+    height: 300px;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.top-product-item{
+
+    font-family: Comfortaa, sans-serif ;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    gap: 15px;
+    border: 1px solid #ccc;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    min-width: 300px;
+    flex: 0 1 500px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.top-product-img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.table-banner{
+    background-color: var(--secondary-products-color);
+    color: white;
+    padding: 30px;
+    width: 100%;
+    /*font-family: Lora, serif;*/
+    justify-content: center;
+
+}
+
+.low-stock{
+    font-weight: bold;
+    color: var(--red-warning-color);
+}
+
+.view-container{
+    align-items: center;
+    margin: auto;
+    max-width: 700px;
+}
+
+.dropdown-filter{
+    font-family: Comfortaa, sans-serif ;
+
+}
+
+.filter-label{
+    color: var(--secondary-products-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.filter-row{
+    padding: 10px;
+    display:flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.filter-col {
+    display: flex;; /* Ensure the filter labels are aligned correctly */
+
+}
+.stock-filter-dropdown, .status-filter-dropdown, .style-filter-dropdown{
+    background: #f3f3f3;
+    width: 140px;
+    height: 35px;
+    font-size: 14px
+}
+
+.stock-filter-dropdown:hover, .status-filter-dropdown:hover, .style-filter-dropdown:hover{
+    width: 140px;
+    height: 35px;
+    border: solid 1px var(--primary-products-color);
+    background: #ffffff;
+}
+
+.filter-col p,
+.filter-col select {
+    display: block;
+    padding-right: 8px;
+}
+
+#ProductsTable thead th a{
+    color: var(--secondary-products-color); !important;
+    font-weight: 600;
+    font-family: Comfortaa, sans-serif ;
+
+}
+
+#ProductsTable tbody td{
+    font-family: Comfortaa, sans-serif ;
+}
+a.add-button{
+    position: relative;
+    color: var(--secondary-products-color);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+a.add-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* thickness of the underline */
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+a.add-button:hover::after {
+    width: 100%;
+}
+
+.list-add-new{
+    margin-right: auto;
+}
+
+.list-name{
+    color: var(--product-text-color); !important;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: #acacac;
+}
+
+.list-name:hover{
+    color: var(--secondary-products-color); !important;
+    font-weight: 600;
+}
+
+.out-of-stock {
+    color: var(--text-label-color);
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.out-of-stock::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 90%;
+    background: var(--primary-products-color); /* red highlight */
+    transform: translate(-50%, -50%);
+    filter: blur(3px); /* the diffusion */
+    z-index: -1;
+    border-radius: 7px;
+
+}
+
+.table-status{
+    color: var(--secondary-products-color);
+    font-weight: bold;
+}
+.btn-edit{
+    padding:5px 10px;
+}
+.btn-status-listed{
+    padding:5px 10px;
+}
+
+.btn-status-unlisted{
+    padding:5px 10px;
+    color: #cdcdcd;
+}
+
+.btn-delete{
+    color: var(--primary-products-color);
+    padding: 5px 10px;
+}
+
+.btn-edit:hover
+{
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    background: #cdcdcd;
+    padding: 5px 10px;
+}
+
+
+.btn-delete:hover{
+    color: var(--primary-products-color);
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    background: #cdcdcd;
+    padding: 5px 10px;
+}
+
+.back-btn{
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Comfortaa, sans-serif;
+    text-decoration: none;
+    border:none
+}
+.back-btn:after{
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the line at the bottom */
+    left: 0;
+    width: 0;
+    height: 1px; /* thickness of the underline */
+    background-color: var(--text-label-color);
+    transition: width 0.3s ease;
+
+}
+.back-btn:hover::after {
+    width: 100%;
+}
+
+.admin-form {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-border-width: 1px;
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: 0.375rem;
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(0.375rem - 1px);
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: #fff;
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-width: 800px;
+    height: var(--bs-card-height);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);;
+    font-family: Comfortaa, sans-serif ;
+}
+
+.admin-card-header{
+    font-family: Lora, serif;
+    font-size: 30px;
+
+}
+.admin-btn-cancel{
+    border: solid 1px var(--primary-products-color);
+    border-radius: 3px;
+}
+.admin-btn-cancel:hover{
+    border: solid 1px var(--primary-products-color);
+    color: var(--text-color);
+    background: var(--primary-products-color);
+    border-radius: 3px;
+
+}
+
+.admin-btn-submit{
+    border: solid 1px var(--secondary-products-color);
+    border-radius: 3px;
+
+}
+
+.admin-btn-submit:hover{
+    border: solid 1px var(--secondary-products-color);
+    background: var(--secondary-products-color);
+    color: var(--text-color);
+    border-radius: 3px;
+
+}
+
+
+/*media responsive*/
+
+@media (max-width: 768px) {
+    .product-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .product-image {
+        margin-bottom: 10px;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .list-add-new {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+.table-responsive .display {
+    font-family: Comfortaa, sans-serif !important;
+}
+
+.table-responsive .dataTables_wrapper {
+    font-family: Comfortaa, sans-serif !important;
+}
+
+.table-responsive .display thead th,
+.table-responsive .display tbody td {
+    font-family: Comfortaa, sans-serif !important;
+}
+
+#ProductsTable thead th a {
+    color: var(--secondary-products-color) !important;
+    font-weight: 600;
+    font-family: Comfortaa, sans-serif !important;
+}
+
+#UsersTable thead th a {
+    color: var(--secondary-products-color) !important;
+    font-weight: 600;
+    font-family: Comfortaa, sans-serif !important;
+}
+
+#UsersTable thead th {
+    color: var(--secondary-products-color) !important;
+    font-weight: 600;
+    font-family: Comfortaa, sans-serif !important;
+}
+
+#OrdersTable thead th a {
+    color: var(--secondary-products-color) !important;
+    font-weight: 600;
+    font-family: Comfortaa, sans-serif !important;
+}
+
+#OrdersTable thead th {
+    color: var(--secondary-products-color) !important;
+    font-weight: 600;
+    font-family: Comfortaa, sans-serif !important;
+}
