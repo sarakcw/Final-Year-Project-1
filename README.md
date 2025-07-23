@@ -22,6 +22,7 @@ It was designed with maintainability and future scalability in mind.
 - MySQL / MariaDB
 - Composer
 - Apache or built-in CakePHP web server
+- Google reCAPTCHA v2 integration on login and registration forms
 - phpMyAdmin (optional, for GUI database management)
 
 ---
@@ -42,6 +43,18 @@ composer install
 1. Navigate to `config/app_local.php`
 2. Import the `database.sql` to your phpMyAdmin
 3. Update the `config/app_local.php` file with your phpMyAdmin/MySQL credentials
+
+### 4. Google Recaptcha setup
+1. Visit Google reCAPTCHA Admin console [https://www.google.com/recaptcha/admin/create]
+2. Register your site:
+   - Choose reCAPTCHA v2
+   - Add your domain
+3. Create .env file
+
+```bash
+RECAPTCHA_SITE_KEY=your_site_key_here
+RECAPTCHA_SECRET_KEY=your_secret_key_here
+```
 
 ### 4. Start the server
 
