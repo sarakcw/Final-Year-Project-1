@@ -9,7 +9,7 @@ It was designed with maintainability and future scalability in mind.
 - User-friendly wine browsing with advanced filtering
 - Shopping cart with item quantity management
 - Admin panel to manage products and orders
-- Dynamic filter support by category (vintage, volume, region, etc.)
+- Dynamic filter support by category
 - MySQL database with phpMyAdmin
 
 ---
